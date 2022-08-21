@@ -6,17 +6,15 @@ namespace OOP1
 {
     class ProductManager
     {
-        public void Add(Product product) 
+        //encapsulation
+        public void Add(Product product)
         {
-            Console.WriteLine(product.ProductName + " eklendi. ");
+            Console.WriteLine(product.ProductName + " eklendi.");
         }
 
-        public void Update(Product product) 
+        public void Update(Product product)
         {
-            Console.WriteLine(product.ProductName + " güncellendi. ");
-        }
-
-      
+            Console.WriteLine(product.ProductName + " güncellendi.");
         }
     }
 }
