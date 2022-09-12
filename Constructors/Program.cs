@@ -1,6 +1,6 @@
 ﻿using System.Security.Cryptography;
 
-Customer customer1 = new Customer {Id=1,FirstName= "Uğur",LastName="Demiroğ", City= "Trabzon"};
+Customer customer1 = new Customer {Id=1,FirstName= "Uğur",LastName="Sağlam", City= "Trabzon"};
 Customer customer2 = new Customer(2,"emir","c","Ankara");// normal parantez method mantığı
 Console.WriteLine(customer2.FirstName);
 
