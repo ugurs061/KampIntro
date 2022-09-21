@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InterfaceAbstractDemo.Entities
 {
-    class Customer:IEntity
+    public class Customer:IEntity
     {
         public int Id { get; set; }
         public string FirstName { get; set; }

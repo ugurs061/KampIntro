@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EC09086F-4D96-4D60-842B-A5E78616A9D3}</ProjectGuid>
+    <ProjectGuid>{44F13F4A-652F-44FF-AFB7-40609E41D4EB}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>InterfaceAbstractDemo</RootNamespace>
     <AssemblyName>InterfaceAbstractDemo</AssemblyName>
@@ -43,7 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\BaseCustomerManager.cs" />
     <Compile Include="Abstract\ICustomerService.cs" />
+    <Compile Include="Concrete\NeroCustomerManager.cs" />
+    <Compile Include="Concrete\StarbucksCustomerManager.cs" />
     <Compile Include="Entities\Customer.cs" />
     <Compile Include="Abstract\IEntity.cs" />
     <Compile Include="Program.cs" />
@@ -52,8 +55,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Concrete\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
