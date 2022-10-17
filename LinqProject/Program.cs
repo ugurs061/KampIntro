@@ -4,16 +4,16 @@ using System.Security.Cryptography.X509Certificates;
 List<Category> categories = new List<Category>
 {
    new Category{CategoryId=1, CategoryName="Bilgisayar"},
-   new Category{CategoryId=1, CategoryName="Telefon"}
+   new Category{CategoryId=2, CategoryName="Telefon"}
 };
 
 List<Product> products = new List<Product>
 {
     new Product{CategoryId=1, ProductId=1, ProductName="Acer Laptop", QuantityPerUnit="32 gb ram", UnitPrice=10000, UnitsInStok=5 },
-    new Product{CategoryId=2, ProductId=1, ProductName="Asus Laptop", QuantityPerUnit="16 gb ram", UnitPrice=8000, UnitsInStok=3 },
-    new Product{CategoryId=3, ProductId=1, ProductName="Hp Laptop", QuantityPerUnit="8 gb ram", UnitPrice=6000, UnitsInStok=2 },
-    new Product{CategoryId=4, ProductId=2, ProductName="Samsung Telefon", QuantityPerUnit="4 gb ram", UnitPrice=5000, UnitsInStok=15 },
-    new Product{CategoryId=5, ProductId=2, ProductName="Apple Telefon", QuantityPerUnit="4 gb ram", UnitPrice=8000, UnitsInStok=0 }
+    new Product{CategoryId=1, ProductId=2, ProductName="Asus Laptop", QuantityPerUnit="16 gb ram", UnitPrice=8000, UnitsInStok=3 },
+    new Product{CategoryId=1, ProductId=3, ProductName="Hp Laptop", QuantityPerUnit="8 gb ram", UnitPrice=6000, UnitsInStok=2 },
+    new Product{CategoryId=2, ProductId=4, ProductName="Samsung Telefon", QuantityPerUnit="4 gb ram", UnitPrice=5000, UnitsInStok=15 },
+    new Product{CategoryId=2, ProductId=5, ProductName="Apple Telefon", QuantityPerUnit="4 gb ram", UnitPrice=8000, UnitsInStok=0 }
 };
 
 
@@ -64,7 +64,7 @@ foreach (var product in result)
 var result = from p in products
              join c in categories
              on p.CategoryId equals c.CategoryId
-             select new ProductDto { ProductId=p.ProductId,CategoryName= c.CategoryName ,ProductName=p.ProductName, UnitPrice=p.UnitPrice };
+             select new ProductDto { ProductId = p.ProductId, CategoryName = c.CategoryName, ProductName = p.ProductName, UnitPrice = p.UnitPrice };
 
 foreach (var productDto in result)
 {
